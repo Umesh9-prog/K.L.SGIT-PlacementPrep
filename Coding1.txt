@@ -1,0 +1,156 @@
+2.Write a program to accept a four digit number from the user and display its denomination.
+
+Example: 5698
+Output: 5*1000 =5000
+6*100 =600
+9*10 =90
+8*1 =8
+
+
+Program:
+
+
+import java.util.Scanner;
+public class p2 {
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 5 digit number");
+        int n=sc.nextInt();
+        
+        int t=1000;
+        int m;
+        int r;
+        while(n>0)
+        {
+          r=n/t;
+          int result=r*t;
+          System.out.println(r+"*"+t+"="+result);
+          n=n%t;
+            t=t/10;
+            
+          
+            
+            
+        }
+    }
+    
+}
+
+
+
+3.Write a program to accept a number from the user and count the number of digits in the number.
+
+Program:
+
+
+import java.util.Scanner;
+
+
+public class p3 {
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 5 digit number");
+        int n=sc.nextInt();
+        int r;
+        int count=0;
+        while(n>0)
+        {
+            r=n%10;
+            count++;
+            n=n/10;
+            
+        }
+        System.out.print(count);
+    
+}
+}
+
+
+
+4.Write a program to generate following patterns
+
+
+1
+1 2 1
+1 2 3 2 1
+1 2 3 4 3 2 1
+1 2 3 4 5 4 3 2 1
+
+public class p4 {
+    public static void main(String[]args)
+    {
+        
+        for(int i=1;i<5;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j+" ");
+            }
+            for(int k=i-1;k>=1;k--)
+            {
+                System.out.print(k+" ");
+                
+            }
+            System.out.println();
+        }
+    
+}
+}
+
+
+5.Write a program to accept the lower bound number and the upper bound number from the user and print the prime numbers between them.
+
+
+
+Expected output:
+
+Enter the lower bound value:
+5
+Enter the upper bound value:
+15
+
+
+
+Program:
+
+
+import java.util.Scanner;
+
+
+public class p5 {
+    public static void main(String[]args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the lower bound value");
+        int l=sc.nextInt();
+        System.out.println("Enter the Upper bound value");
+        int u=sc.nextInt();
+        
+        
+        for(int i=l;i<=u;i++)
+        {
+            boolean flag=true;
+            for(int j=2;j<=i/2;j++)
+            {
+                if(i%j==0)
+                {
+                    flag=false;
+                    break;
+                    
+                }
+            }
+            if(flag==true)
+            {
+                System.out.print(i+" ");
+            }
+           
+        }
+    
+}
+}
+
+
+
+
